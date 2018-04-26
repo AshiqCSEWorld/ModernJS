@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .color {
+      background: orangered;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    const color1 = 'red';
+    const color2 = 'blue'
+    const color3 = 'Javascript';
+    const color4 = 'You'
+
+    function Highlight(strings, ...res) {
+      let str = ' ';
+      strings.forEach((string, i) => {
+        // str += strings+ (res[i] || ' ');
+        str += `${string} <span class="color">${(res[i] || '')}</span>`;
+      })
+      return str;
+    }
+
+    const sentence = Highlight `Roses are ${color1} Sky is ${color2} I love ${color3}. Where are ${color4}`;
+    document.body.innerHTML = sentence;
+    console.log(sentence);
+  </script>
+</body>
+
+</html>
