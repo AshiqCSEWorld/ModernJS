@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // FOR LOOP
+    for (let i = 0; i <= 10; i++) {
+
+      if (i === 2) {
+        console.log('2 is my favourite number');
+        continue;
+
+      }
+      console.log('Number ' + i);
+
+    }
+
+    const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+
+    for (let i = 0; i < cars.length; i++) {
+      console.log(cars[i]);
+
+    }
+
+    console.log('Using For Each loop');
+    cars.forEach((car, index) => {
+      console.log(`${car} ${index}`);
+
+    });
+
+    // MAP
+    const users = [{
+        id: 1,
+        name: 'John'
+      },
+      {
+        id: 2,
+        name: 'Sara'
+      },
+      {
+        id: 3,
+        name: 'Karen'
+      },
+      {
+        id: 4,
+        name: 'Steve'
+      }
+    ];
+
+    const ids = users.map(user => {
+      return user.id;
+    });
+
+    console.log(ids);
+
+    //For in
+    const user = {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 40
+    }
+
+    for (let x in user) {
+      console.log(`${x} : ${user[x]}`);
+
+    }
+  </script>
+</body>
+
+</html>
